@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chelsea Veneziano | Data Analyst Portfolio</title>
-<meta name="description" content="Data science portfolio of Chelsea Veneziano: analytics, machine learning, and data engineering projects focused on public-sector and community impact.">
+<meta name="description" content="Data science portfolio of Chelsea Veneziano: analytics, machine learning, and data engineering projects focused on public sector and community impact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -113,7 +113,7 @@
   <div class="wrap">
     <div class="eyebrow">Data Analyst · M.S. Data Science</div>
     <h1>Turning public data into decisions that matter.</h1>
-    <p class="lede">I'm a financial analyst finishing a Master's in Data Science. I build end-to-end analyses on health, housing, and family affordability data. These are the same kinds of questions that public agencies, schools, healthcare systems, and nonprofits face every day.</p>
+    <p class="lede">I'm a financial analyst finishing a Master's in Data Science. I build complete analyses on health, housing, and family affordability data. These are the same kinds of questions that public agencies, schools, healthcare systems, and nonprofits face every day.</p>
     <div class="cta">
       <a class="btn primary" href="#projects">View projects</a>
       <a class="btn ghost" href="https://github.com/chelseaveneziano" target="_blank" rel="noopener">GitHub</a>
@@ -130,18 +130,18 @@
 <section id="about">
   <div class="wrap">
     <h2>About</h2>
-    <p class="sub">Finance background, data science toolkit, public-impact focus.</p>
+    <p class="sub">Finance background, data science toolkit, public impact focus.</p>
     <div class="about-grid">
       <div>
         <p>I work as a Financial Analyst and Contract Specialist in San Diego, where accuracy, compliance, and clear reporting are part of every day. That work showed me how much better decisions get when the numbers are organized and explained well.</p>
-        <p>I'm completing my M.S. in Data Science at Bellevue University (November 2026). My projects span the full workflow: sourcing and combining messy public datasets, exploratory analysis, statistical modeling, machine learning, big-data pipelines, and dashboards built for non-technical audiences.</p>
+        <p>I'm completing my M.S. in Data Science at Bellevue University (November 2026). My projects span the full workflow: sourcing and combining messy public datasets, exploratory analysis, statistical modeling, machine learning, big data pipelines, and dashboards built for nontechnical audiences.</p>
         <p>I'm looking for a data analyst role in public service, whether that's a government agency, a college or university, a school district, a nonprofit healthcare system, or a mission driven nonprofit. I want my work to directly support programs, students, patients, and the communities they serve.</p>
       </div>
       <div class="skills">
         <h3>Languages &amp; analysis</h3>
-        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">Statistics</span></div>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">statsmodels</span><span class="chip">SQLite</span><span class="chip">REST APIs</span></div>
         <h3>Visualization</h3>
-        <div class="chips"><span class="chip">Tableau</span><span class="chip">matplotlib</span><span class="chip">seaborn</span><span class="chip">Infographics</span></div>
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">Plotly</span><span class="chip">Matplotlib</span><span class="chip">seaborn</span></div>
         <h3>Big data</h3>
         <div class="chips"><span class="chip">PySpark</span><span class="chip">Hive</span><span class="chip">HBase</span><span class="chip">HDFS</span><span class="chip">NiFi</span></div>
         <h3>Domain</h3>
@@ -168,65 +168,65 @@
     <div class="grid">
 
       <article class="card featured" data-cat="ml policy">
-        <span class="tag">Featured · Capstone · DSC 680</span>
-        <h3>Housing Price Direction Prediction</h3>
-        <p>A classification approach to housing markets across 15 U.S. metro areas. Instead of predicting an exact price, the model predicts whether prices will rise or fall, using FRED economic indicators and Zillow home value data. The final Random Forest model reached 88% accuracy, giving buyers, planners, and housing agencies a clearer signal to act on.</p>
-        <p class="q"><b>Question:</b> Can economic and market indicators reliably predict the direction of housing price movement?</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">Random Forest</span><span class="chip">FRED</span><span class="chip">Zillow</span><span class="chip">88% accuracy</span></div>
+        <span class="tag">Featured · Current project</span>
+        <h3>Home Price Direction Prediction</h3>
+        <p>Predicts whether home prices will rise or fall the following month across the 15 largest U.S. metro areas. It combines mortgage rate, unemployment, and inflation data from the FRED API with the Zillow Home Value Index. On held out data from 2022 onward, Random Forest reached 88% accuracy and an F1 score of 0.91, well above the logistic regression baseline.</p>
+        <p class="q"><b>Question:</b> Can economic indicators predict next month's direction of home prices?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">FRED API</span><span class="chip">Zillow</span><span class="chip">88% accuracy</span><span class="chip">F1 0.91</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/housing-price-direction-prediction" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="policy viz">
-        <span class="tag">Public policy · DSC 640</span>
+        <span class="tag">Public policy · Visualization</span>
         <h3>Childcare Affordability Analysis</h3>
-        <p>Analysis of the National Database of Childcare Prices to show how childcare costs compare to family income across the U.S. Delivered as a slide deck, infographic, and interactive Tableau dashboard.</p>
-        <p class="q"><b>Question:</b> Where is childcare least affordable, and for which families?</p>
-        <div class="chips"><span class="chip">Tableau</span><span class="chip">Dashboard</span><span class="chip">Storytelling</span></div>
+        <p>Uses the National Database of Childcare Prices to measure the share of household income families spend on center based care for children from birth to age 5, by state and county. Every state exceeds the federal 7% affordability benchmark, ranging from 11.3% in South Dakota to 28.6% in Washington.</p>
+        <p class="q"><b>Question:</b> How affordable is childcare for families in each state?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Plotly</span><span class="chip">Matplotlib</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/childcare-affordability-analysis" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="policy">
         <span class="tag">Public health · Multi-source</span>
         <h3>Life Expectancy Trends, 2003 to 2023</h3>
-        <p>Combines Kaggle data, Wikipedia tables, and the WHO API into one cleaned dataset to examine two decades of life expectancy trends and the factors that move them.</p>
-        <p class="q"><b>Question:</b> How has life expectancy changed, and what factors are associated with the gaps?</p>
-        <div class="chips"><span class="chip">API data</span><span class="chip">Web scraping</span><span class="chip">Data merging</span></div>
+        <p>Combines three source types: a Kaggle flat file, tables scraped from Wikipedia, and the WHO Global Health Observatory API. Each source is cleaned separately, loaded into SQLite, and joined by country. The results show a lasting gap between developed and developing countries and positive links between life expectancy, schooling, and immunization.</p>
+        <p class="q"><b>Question:</b> What factors are linked to differences in life expectancy between countries?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">WHO API</span><span class="chip">Web scraping</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/life-expectancy-multisource-analysis" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="eng ml">
-        <span class="tag">Data engineering · DSC 650</span>
-        <h3>Telco Customer Churn Big-Data Pipeline</h3>
-        <p>An end-to-end pipeline that ingests customer data with NiFi, stores it in HDFS, queries it with Hive, models churn with PySpark MLlib, and serves results from HBase.</p>
+        <span class="tag">Data engineering</span>
+        <h3>Telco Customer Churn Big Data Pipeline</h3>
+        <p>A full pipeline that predicts customer churn. NiFi ingests 7,043 customer records into HDFS, Hive structures them for querying, PySpark MLlib trains a logistic regression model, and the evaluation metrics are written to HBase. The model reached about 80% accuracy and an AUC of 0.84.</p>
         <p class="q"><b>Question:</b> Which customers are likely to leave, and how do you build that at scale?</p>
-        <div class="chips"><span class="chip">NiFi</span><span class="chip">HDFS</span><span class="chip">Hive</span><span class="chip">PySpark</span><span class="chip">HBase</span></div>
+        <div class="chips"><span class="chip">NiFi</span><span class="chip">HDFS</span><span class="chip">Hive</span><span class="chip">PySpark</span><span class="chip">HBase</span><span class="chip">0.84 AUC</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/telco-churn-pipeline-nifi-hive-spark-hbase" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="ml policy">
-        <span class="tag">Machine learning · DSC 630</span>
-        <h3>Diabetes Prediction</h3>
-        <p>Compares Logistic Regression, Random Forest, and XGBoost to predict diabetes from clinical data, weighing accuracy against how easy each model is to explain for early screening.</p>
-        <p class="q"><b>Question:</b> Which health measures best predict diabetes risk?</p>
-        <div class="chips"><span class="chip">Logistic Regression</span><span class="chip">Random Forest</span><span class="chip">XGBoost</span></div>
+        <span class="tag">Machine learning · Health</span>
+        <h3>Diabetes Risk Prediction</h3>
+        <p>Flags patients at risk for diabetes using 768 patient records and 8 clinical features. It compares Logistic Regression, Random Forest, and XGBoost on accuracy, precision, recall, F1, and ROC AUC. Random Forest was the most balanced model at 77% accuracy and 69% recall, with glucose and BMI as the strongest predictors.</p>
+        <p class="q"><b>Question:</b> Which clinical measures best identify patients at risk for diabetes?</p>
+        <div class="chips"><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">77% accuracy</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/diabetes-risk-prediction" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="policy">
-        <span class="tag">Statistics · DSC 530</span>
-        <h3>Heart Disease EDA &amp; Regression</h3>
-        <p>Exploratory data analysis and regression modeling on heart disease patient data, examining which factors predict resting blood pressure.</p>
-        <p class="q"><b>Question:</b> Which patient characteristics best predict resting blood pressure?</p>
-        <div class="chips"><span class="chip">EDA</span><span class="chip">Regression</span><span class="chip">Hypothesis testing</span></div>
+        <span class="tag">Statistics · Health</span>
+        <h3>Heart Disease EDA and Regression</h3>
+        <p>Analyzes 1,025 heart disease patient records to test whether age, sex, and cholesterol affect resting blood pressure, using distributions, PMF and CDF analysis, correlation, a t test, and OLS regression. Age and cholesterol were significant predictors, but the model explained little of the variance (R² = 0.080).</p>
+        <p class="q"><b>Question:</b> Do age, sex, and cholesterol affect resting blood pressure?</p>
+        <div class="chips"><span class="chip">pandas</span><span class="chip">SciPy</span><span class="chip">statsmodels</span><span class="chip">seaborn</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/heart-disease-eda-regression" target="_blank" rel="noopener">View repository →</a>
       </article>
 
       <article class="card" data-cat="viz">
-        <span class="tag">Visualization · DSC 640</span>
-        <h3>Netflix Top 10 Viewership</h3>
-        <p>Visual analysis of Netflix's weekly Top 10 data to show which titles and categories hold audiences longest.</p>
-        <p class="q"><b>Question:</b> What separates a one-week hit from a title that stays on the chart?</p>
-        <div class="chips"><span class="chip">Visualization</span><span class="chip">Trend analysis</span></div>
+        <span class="tag">Data storytelling</span>
+        <h3>Netflix Top 10 Longevity Analysis</h3>
+        <p>Cleans and joins three of Netflix's public Top 10 datasets, including more than 270,000 country level weekly rankings, to find the titles with the most cumulative weeks in the global Top 10. The analysis argues that weeks on the list measure staying power better than a strong debut, and presents the findings for a content strategy audience.</p>
+        <p class="q"><b>Question:</b> What is a better measure of a title's success than its opening week?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">Matplotlib</span><span class="chip">Storytelling</span></div>
         <a class="more" href="https://github.com/chelseaveneziano/netflix-top10-longevity-analysis" target="_blank" rel="noopener">View repository →</a>
       </article>
 

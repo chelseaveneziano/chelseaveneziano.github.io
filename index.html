@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chelsea Veneziano | Data Analyst Portfolio</title>
+<meta name="description" content="Data science portfolio of Chelsea Veneziano: analytics, machine learning, and data engineering projects focused on public-sector and community impact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1c2430;
+    --muted: #5b6573;
+    --line: #e3dfd5;
+    --accent: #1f6f6b;
+    --accent-soft: #e2efed;
+    --gold: #b7862c;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161c; --surface: #1a2029; --ink: #eef1f4; --muted: #a3adba;
+      --line: #2a323d; --accent: #5cc2b8; --accent-soft: #1d3332; --gold: #e0b45c;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  .logo { font-family: Fraunces, serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .links a { margin-left: 22px; color: var(--muted); text-decoration: none; font-weight: 500; font-size: .95rem; }
+  .links a:hover { color: var(--accent); }
+
+  /* Hero */
+  header { padding: 88px 0 64px; }
+  .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+  h1 { font-family: Fraunces, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 14px 0 18px; max-width: 16ch; }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 58ch; }
+  .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: .95rem; }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.ghost { border: 1.5px solid var(--line); color: var(--ink); }
+  .stats { display: flex; gap: 36px; margin-top: 44px; flex-wrap: wrap; }
+  .stat b { display: block; font-family: Fraunces, serif; font-size: 1.8rem; }
+  .stat span { color: var(--muted); font-size: .9rem; }
+
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: Fraunces, serif; font-size: 2rem; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 32px; max-width: 60ch; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+  .about-grid p { margin-bottom: 14px; }
+  .skills { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .skills h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 14px 0 8px; }
+  .skills h3:first-child { margin-top: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { background: var(--accent-soft); color: var(--accent); padding: 4px 10px; border-radius: 999px; font-size: .82rem; font-weight: 500; }
+
+  /* Projects */
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .filters button { font: inherit; font-size: .88rem; padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }
+  .filters button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.07); }
+  .card .tag { font-size: .75rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: .06em; }
+  .card h3 { font-family: Fraunces, serif; font-size: 1.25rem; margin: 6px 0 10px; line-height: 1.25; }
+  .card p { color: var(--muted); font-size: .94rem; margin-bottom: 12px; }
+  .card .q { font-size: .9rem; margin-bottom: 14px; }
+  .card .q b { color: var(--ink); }
+  .card .chips { margin-bottom: 18px; }
+  .card .more { margin-top: auto; font-weight: 600; text-decoration: none; font-size: .92rem; }
+  .card.featured { grid-column: 1 / -1; border-left: 4px solid var(--accent); }
+  .hidden { display: none; }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .contact a { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; text-decoration: none; color: var(--ink); }
+  .contact a span { display: block; color: var(--muted); font-size: .85rem; }
+  .contact a b { font-weight: 600; word-break: break-word; }
+
+  footer { padding: 32px 0; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .links a { margin-left: 14px; font-size: .88rem; }
+    header { padding: 56px 0 44px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Chelsea Veneziano</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="eyebrow">Data Analyst · M.S. Data Science</div>
+    <h1>Turning public data into decisions that matter.</h1>
+    <p class="lede">I'm a financial analyst finishing a Master's in Data Science. I build end-to-end analyses on health, housing, and family affordability data. These are the same kinds of questions that public agencies, schools, healthcare systems, and nonprofits face every day.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="https://github.com/chelseaveneziano" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>7</b><span>Portfolio projects</span></div>
+      <div class="stat"><b>4.0</b><span>Graduate GPA</span></div>
+      <div class="stat"><b>Nov 2026</b><span>M.S. completion</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="sub">Finance background, data science toolkit, public-impact focus.</p>
+    <div class="about-grid">
+      <div>
+        <p>I work as a Financial Analyst and Contract Specialist in San Diego, where accuracy, compliance, and clear reporting are part of every day. That work showed me how much better decisions get when the numbers are organized and explained well.</p>
+        <p>I'm completing my M.S. in Data Science at Bellevue University (November 2026). My projects span the full workflow: sourcing and combining messy public datasets, exploratory analysis, statistical modeling, machine learning, big-data pipelines, and dashboards built for non-technical audiences.</p>
+        <p>I'm looking for a data analyst role in public service, whether that's a government agency, a college or university, a school district, a nonprofit healthcare system, or a mission driven nonprofit. I want my work to directly support programs, students, patients, and the communities they serve.</p>
+      </div>
+      <div class="skills">
+        <h3>Languages &amp; analysis</h3>
+        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">SQL</span><span class="chip">scikit-learn</span><span class="chip">Statistics</span></div>
+        <h3>Visualization</h3>
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">matplotlib</span><span class="chip">seaborn</span><span class="chip">Infographics</span></div>
+        <h3>Big data</h3>
+        <div class="chips"><span class="chip">PySpark</span><span class="chip">Hive</span><span class="chip">HBase</span><span class="chip">HDFS</span><span class="chip">NiFi</span></div>
+        <h3>Domain</h3>
+        <div class="chips"><span class="chip">Finance</span><span class="chip">Contracts</span><span class="chip">Public health</span><span class="chip">Housing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS (fully populated) ============ -->
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Selected work from my graduate program. Each card links to the full repository with code, data notes, and results.</p>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="on" data-f="all">All</button>
+      <button data-f="ml">Machine learning</button>
+      <button data-f="policy">Public policy &amp; health</button>
+      <button data-f="eng">Data engineering</button>
+      <button data-f="viz">Visualization</button>
+    </div>
+
+    <div class="grid">
+
+      <article class="card featured" data-cat="ml policy">
+        <span class="tag">Featured · Capstone · DSC 680</span>
+        <h3>Housing Price Direction Prediction</h3>
+        <p>A classification approach to housing markets across 15 U.S. metro areas. Instead of predicting an exact price, the model predicts whether prices will rise or fall, using FRED economic indicators and Zillow home value data. The final Random Forest model reached 88% accuracy, giving buyers, planners, and housing agencies a clearer signal to act on.</p>
+        <p class="q"><b>Question:</b> Can economic and market indicators reliably predict the direction of housing price movement?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Random Forest</span><span class="chip">FRED</span><span class="chip">Zillow</span><span class="chip">88% accuracy</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/housing-price-direction-prediction" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="policy viz">
+        <span class="tag">Public policy · DSC 640</span>
+        <h3>Childcare Affordability Analysis</h3>
+        <p>Analysis of the National Database of Childcare Prices to show how childcare costs compare to family income across the U.S. Delivered as a slide deck, infographic, and interactive Tableau dashboard.</p>
+        <p class="q"><b>Question:</b> Where is childcare least affordable, and for which families?</p>
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">Dashboard</span><span class="chip">Storytelling</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/childcare-affordability-analysis" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="policy">
+        <span class="tag">Public health · Multi-source</span>
+        <h3>Life Expectancy Trends, 2003 to 2023</h3>
+        <p>Combines Kaggle data, Wikipedia tables, and the WHO API into one cleaned dataset to examine two decades of life expectancy trends and the factors that move them.</p>
+        <p class="q"><b>Question:</b> How has life expectancy changed, and what factors are associated with the gaps?</p>
+        <div class="chips"><span class="chip">API data</span><span class="chip">Web scraping</span><span class="chip">Data merging</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/life-expectancy-multisource-analysis" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="eng ml">
+        <span class="tag">Data engineering · DSC 650</span>
+        <h3>Telco Customer Churn Big-Data Pipeline</h3>
+        <p>An end-to-end pipeline that ingests customer data with NiFi, stores it in HDFS, queries it with Hive, models churn with PySpark MLlib, and serves results from HBase.</p>
+        <p class="q"><b>Question:</b> Which customers are likely to leave, and how do you build that at scale?</p>
+        <div class="chips"><span class="chip">NiFi</span><span class="chip">HDFS</span><span class="chip">Hive</span><span class="chip">PySpark</span><span class="chip">HBase</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/telco-churn-pipeline-nifi-hive-spark-hbase" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="ml policy">
+        <span class="tag">Machine learning · DSC 630</span>
+        <h3>Diabetes Prediction</h3>
+        <p>Compares Logistic Regression, Random Forest, and XGBoost to predict diabetes from clinical data, weighing accuracy against how easy each model is to explain for early screening.</p>
+        <p class="q"><b>Question:</b> Which health measures best predict diabetes risk?</p>
+        <div class="chips"><span class="chip">Logistic Regression</span><span class="chip">Random Forest</span><span class="chip">XGBoost</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/diabetes-risk-prediction" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="policy">
+        <span class="tag">Statistics · DSC 530</span>
+        <h3>Heart Disease EDA &amp; Regression</h3>
+        <p>Exploratory data analysis and regression modeling on heart disease patient data, examining which factors predict resting blood pressure.</p>
+        <p class="q"><b>Question:</b> Which patient characteristics best predict resting blood pressure?</p>
+        <div class="chips"><span class="chip">EDA</span><span class="chip">Regression</span><span class="chip">Hypothesis testing</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/heart-disease-eda-regression" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="viz">
+        <span class="tag">Visualization · DSC 640</span>
+        <h3>Netflix Top 10 Viewership</h3>
+        <p>Visual analysis of Netflix's weekly Top 10 data to show which titles and categories hold audiences longest.</p>
+        <p class="q"><b>Question:</b> What separates a one-week hit from a title that stays on the chart?</p>
+        <div class="chips"><span class="chip">Visualization</span><span class="chip">Trend analysis</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/netflix-top10-longevity-analysis" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="sub">Open to data analyst roles in government, education, healthcare, and nonprofit organizations. I'd love to hear from you.</p>
+    <div class="contact">
+      <a href="mailto:chelsealv35@gmail.com"><span>Email</span><b>chelsealv35@gmail.com</b></a>
+      <a href="https://www.linkedin.com/in/chelsea-veneziano" target="_blank" rel="noopener"><span>LinkedIn</span><b>linkedin.com/in/chelsea-veneziano</b></a>
+      <a href="https://github.com/chelseaveneziano" target="_blank" rel="noopener"><span>GitHub</span><b>github.com/chelseaveneziano</b></a>
+      <a href="#top"><span>Location</span><b>San Diego County, CA</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Chelsea Veneziano · Built with GitHub Pages</div>
+</footer>
+
+<script>
+  const btns = document.querySelectorAll('.filters button');
+  const cards = document.querySelectorAll('.card');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    const f = b.dataset.f;
+    cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && !c.dataset.cat.split(' ').includes(f)));
+  }));
+</script>
+</body>
+</html>

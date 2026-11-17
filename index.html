@@ -113,13 +113,13 @@
   <div class="wrap">
     <div class="eyebrow">Data Analyst · M.S. Data Science</div>
     <h1>Turning public data into decisions that matter.</h1>
-    <p class="lede">I'm a financial analyst finishing a Master's in Data Science. I build complete analyses on health, housing, and family affordability data. These are the same kinds of questions that public agencies, schools, healthcare systems, and nonprofits face every day.</p>
+    <p class="lede">I'm a financial analyst finishing a Master's in Data Science. I build complete analyses on wildfire risk, health, housing, and family affordability data. These are the same kinds of questions that public agencies, schools, healthcare systems, and nonprofits face every day.</p>
     <div class="cta">
       <a class="btn primary" href="#projects">View projects</a>
       <a class="btn ghost" href="https://github.com/chelseaveneziano" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>7</b><span>Portfolio projects</span></div>
+      <div class="stat"><b>8</b><span>Portfolio projects</span></div>
       <div class="stat"><b>4.0</b><span>Graduate GPA</span></div>
       <div class="stat"><b>Nov 2026</b><span>M.S. completion</span></div>
     </div>
@@ -145,7 +145,7 @@
         <h3>Big data</h3>
         <div class="chips"><span class="chip">PySpark</span><span class="chip">Hive</span><span class="chip">HBase</span><span class="chip">HDFS</span><span class="chip">NiFi</span></div>
         <h3>Domain</h3>
-        <div class="chips"><span class="chip">Finance</span><span class="chip">Contracts</span><span class="chip">Public health</span><span class="chip">Housing</span></div>
+        <div class="chips"><span class="chip">Finance</span><span class="chip">Contracts</span><span class="chip">Public safety</span><span class="chip">Public health</span><span class="chip">Housing</span></div>
       </div>
     </div>
   </div>
@@ -168,7 +168,16 @@
     <div class="grid">
 
       <article class="card featured" data-cat="ml policy">
-        <span class="tag">Featured · Current project</span>
+        <span class="tag">Featured · Capstone project</span>
+        <h3>Predicting Large Wildfires at Initial Attack</h3>
+        <p>Uses 183,622 California wildfires (2000 to 2020) from the public FPA FOD-Attributes dataset to predict which new fires will escape initial attack and grow past 10 acres, using only what is known when the fire is first reported. Gradient boosting performed best (ROC-AUC 0.793), and at the chosen cutoff it caught 60% of escapes while flagging about 1 in 5 fires. How remote and undeveloped an area is mattered about 3 times more than weather. A fairness check found the model caught fewer escapes in the most socially vulnerable communities, a gap I document along with recommended fixes.</p>
+        <p class="q"><b>Question:</b> Can we tell which wildfires will get away from the first crews, at the moment they are reported?</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Gradient boosting</span><span class="chip">Time-based validation</span><span class="chip">Fairness analysis</span><span class="chip">0.79 AUC</span></div>
+        <a class="more" href="https://github.com/chelseaveneziano/wildfire-initial-attack-prediction" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="card" data-cat="ml policy">
+        <span class="tag">Machine learning · Housing</span>
         <h3>Home Price Direction Prediction</h3>
         <p>Predicts whether home prices will rise or fall the following month across the 15 largest U.S. metro areas. It combines mortgage rate, unemployment, and inflation data from the FRED API with the Zillow Home Value Index. On held out data from 2022 onward, Random Forest reached 88% accuracy and an F1 score of 0.91, well above the logistic regression baseline.</p>
         <p class="q"><b>Question:</b> Can economic indicators predict next month's direction of home prices?</p>
